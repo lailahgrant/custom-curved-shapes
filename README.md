@@ -33,4 +33,4 @@ b) SVGs
 
 
 Link to preview is as follows:
-[curves]()
+[curves](https://custom-curved-shapes.netlify.app/)
