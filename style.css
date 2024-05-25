@@ -1,0 +1,106 @@
+h1{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+body{
+    margin:0;
+    color:white;
+    background:#1d2228;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+section{
+    /* add position:relative; to parent and absolute to child */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 400px;
+    padding-top: 100px;
+}
+
+.pink{
+    background: #ff0066;
+}
+
+.curve{
+    /* add position:absolute; */
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before{
+    content: '';
+    display: block;
+    position: absolute;
+    /* border-radius: 100%; - perfect circle */
+    border-radius: 100% 50%; /* ellipse. border-radius: verticalRadius horizontalRadius; */
+    width: 55%;
+    height: 100%;
+    background-color: #1d2228;
+    /* place them using the x and y axis */
+    transform: translate(-5%, 60%);
+}
+
+.curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #ff0066;
+    transform: translate(90%, 50%);
+}
+
+
+/* circle ellipse */
+.circle::after{
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 85%;
+    background-color: #0f0f10;
+}
+
+.circle-content{
+    background: #0f0f10;
+}
+
+/* SVG Section */
+.blue{
+    background-color: #2cabff;
+}
+
+.custom-shape-divider-top-1716616244 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1716616244 svg {
+    position: relative;
+    display: block;
+    width: calc(128% + 1.3px);
+    height: 124px;
+}
+
+.custom-shape-divider-top-1716616244 .shape-fill {
+    fill: #1d2228;
+}
+
